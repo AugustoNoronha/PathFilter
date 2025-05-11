@@ -67,27 +67,60 @@ def imprimir_labirinto(labirinto, caminho):
         print(" ".join(linha))
 
 def main():
-    labirinto = [
+    
+    print("\n=== Exemplo 1: Labirinto Simples ===")
+    labirinto1 = [
         ['S','0','1','0','0'],
         ['0','0','1','0','1'],
         ['1','0','1','0','0'],
         ['1','0','0','E','1']
     ]
+    print("\nLabirinto Original:")
+    for linha in labirinto1:
+        print(" ".join(linha))
+    
+    caminho1 = a_estrela(labirinto1)
+    if caminho1:
+        print("\nMenor caminho encontrado:")
+        imprimir_labirinto(labirinto1, caminho1)
+    else:
+        print("Sem solução.")
 
-    caminho = a_estrela(labirinto)
-    if caminho:
-        print("Menor caminho (em coordenadas):")
-        caminho_rotulado = []
-        for i, p in enumerate(caminho):
-            if labirinto[p[0]][p[1]] == 'S':
-                caminho_rotulado.append(f"s{p}")
-            elif labirinto[p[0]][p[1]] == 'E':
-                caminho_rotulado.append(f"e{p}")
-            else:
-                caminho_rotulado.append(str(p))
-        print(caminho_rotulado)
-        print("\nLabirinto com o caminho destacado:")
-        imprimir_labirinto(labirinto, caminho)
+    # Exemplo 2: Labirinto sem solução
+    print("\n=== Exemplo 2: Labirinto Sem Solução ===")
+    labirinto2 = [
+        ['S','1','0','0','0'],
+        ['1','1','1','0','1'],
+        ['0','0','1','0','0'],
+        ['1','1','1','E','1']
+    ]
+    print("\nLabirinto Original:")
+    for linha in labirinto2:
+        print(" ".join(linha))
+    
+    caminho2 = a_estrela(labirinto2)
+    if caminho2:
+        print("\nMenor caminho encontrado:")
+        imprimir_labirinto(labirinto2, caminho2)
+    else:
+        print("Sem solução.")
+
+    # Exemplo 3: Labirinto com múltiplos caminhos
+    print("\n=== Exemplo 3: Labirinto com Múltiplos Caminhos ===")
+    labirinto3 = [
+        ['S','0','0','0','0'],
+        ['1','1','0','1','0'],
+        ['0','0','0','0','0'],
+        ['0','1','1','1','E']
+    ]
+    print("\nLabirinto Original:")
+    for linha in labirinto3:
+        print(" ".join(linha))
+    
+    caminho3 = a_estrela(labirinto3)
+    if caminho3:
+        print("\nMenor caminho encontrado:")
+        imprimir_labirinto(labirinto3, caminho3)
     else:
         print("Sem solução.")
 
