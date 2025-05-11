@@ -1,9 +1,9 @@
 # PathFilter
 
 ## Contribuidores
-- Augusto Noronha
-- Gabriel Lourenço
-- Pedro Máximo
+- [Augusto Noronha](https://github.com/AugustoNoronha)
+- [Gabriel Lourenço](https://github.com/gabrielreisresende)
+- [Pedro Máximo](https://github.com/pedromaximocampos)
 
 ## Descrição do Projeto
 PathFilter é um projeto que implementa o algoritmo A* para encontrar o caminho mais curto em um labirinto 2D. O algoritmo utiliza a distância de Manhattan como heurística para otimizar a busca do caminho ideal entre um ponto inicial e um ponto final no labirinto.
